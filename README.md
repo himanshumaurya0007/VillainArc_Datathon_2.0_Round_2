@@ -22,10 +22,24 @@ Application Architecture:
 
 ## Features:
 
-- School and University Support: Educational institutions can integrate the app to provide mental health resources and support for students and staff. 
-- Preventive Mental Health Screenings: The mental health platform is integrated into routine health screenings, offering preventive mental health assessments. 
-- Telehealth Mental Health Consultations: The platform facilitates telehealth consultations with mental health professionals. User can securely connect with therapists, counselors, or psychiatrists for counseling sessions enhancing accessibility to mental health care. 
-- Work-Life Balance: Users can assess and improve their work-life balance, with the app offering strategies and resources for managing stress and maintaining well-being.
+- General Public Seeking Health Information: Individuals looking for instant and reliable information on symptoms, preventive measures, or general health queries can benefit from an AI chatbot. 
+
+- Emergency Situations and Outbreaks: During public health emergencies or outbreaks, the chatbot can rapidly disseminate accurate information, offer guidance on protective measures, and address common medical practices. 
+
+- Health Education Programs: Educational institutions, public health organizations, and community health programs can integrate the chatbot into health education initiatives, promoting awareness.
+
+- Healthcare Professionals for Reference: Healthcare professionals can use the chatbot as a quick reference tool for general health information, allowing them to focus on more complex medical issues while ensuring that the information provided aligns with current medical knowledge.
+
+- Reliability in Critical Situations : In critical healthcare scenarios, where immediate and accurate information is crucial, our chatbot demonstrates high accuracy.
+
+- Seamless Integration: Integrating with telehealth services or healthcare providers, enabling users to transition from self-assessment to professional support seamlessly.
+
+- Evidence-Based Algorithms: Using validated and evidence-based algorithms for accurate mental health assessment, increasing user trust in the app's results.
+
+- Personal Mental Health Checkup: Users can use the app to regularly assess their mental health status, helping them identify changes or potential concerns over time. 
+
+- Inter-operability with Healthcare Systems: Ensuring seamless integration with existing healthcare systems and other telemedicine platforms is essential for the chatbot to effectively collaborate with healthcare professionals.
+
 
 ## Screening Prediction - Model Training:
 

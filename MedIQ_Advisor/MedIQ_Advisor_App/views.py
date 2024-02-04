@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponse, redirect
 from datetime import datetime
-from MedIQ_Advisor_App.models import Contact, Sign_up
+from MedIQ_Advisor_App.models import Contact, Sign_up, Mental_Health_Survey
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
 # Create your views here.
@@ -97,3 +97,63 @@ def contact_function(request):
         messages.success(request, "Your message has been sent!!")
         
     return render(request, 'contact.html')
+
+def emotion_questionnaire_function(request):
+    if request.method == 'POST':
+        # Retrieve data from the form
+        age = request.POST.get('age')
+        gender = request.POST.get('gender')
+        self_employed = request.POST.get('selfEmployed')
+        family_history = request.POST.get('familyHistory')
+        mental_health_interference = request.POST.get('mentalHealthInterference')
+        company_size = request.POST.get('companySize')
+        remote_work = request.POST.get('remoteWork')
+        tech_company = request.POST.get('techCompany')
+        mental_health_benefits = request.POST.get('mentalHealthBenefits')
+        know_mental_health_care = request.POST.get('knowMentalHealthCare')
+        discussed_mental_health = request.POST.get('discussedMentalHealth')
+        resources_learn_mental_health = request.POST.get('resourcesLearnMentalHealth')
+        anonymity_protected = request.POST.get('anonymityProtected')
+        medical_leave = request.POST.get('medicalLeave')
+        negative_consequences_mental_health = request.POST.get('negativeConsequencesMentalHealth')
+        negative_consequences_physical_health = request.POST.get('negativeConsequencesPhysicalHealth')
+        discuss_with_coworkers = request.POST.get('discussWithCoworkers')
+        discuss_with_supervisors = request.POST.get('discussWithSupervisors')
+        bring_up_in_interview_mental_health = request.POST.get('bringUpInInterviewMentalHealth')
+        bring_up_in_interview_physical_health = request.POST.get('bringUpInInterviewPhysicalHealth')
+        employer_takes_mental_health_seriously = request.POST.get('employerTakesMentalHealthSeriously')
+        observed_negative_consequences = request.POST.get('observedNegativeConsequences')
+
+        # Save the survey data to the database
+        survey_data = Mental_Health_Survey(
+            age=age,
+            gender=gender,
+            self_employed=self_employed,
+            family_history=family_history,
+            mental_health_interference=mental_health_interference,
+            company_size=company_size,
+            remote_work=remote_work,
+            tech_company=tech_company,
+            mental_health_benefits=mental_health_benefits,
+            know_mental_health_care=know_mental_health_care,
+            discussed_mental_health=discussed_mental_health,
+            resources_learn_mental_health=resources_learn_mental_health,
+            anonymity_protected=anonymity_protected,
+            medical_leave=medical_leave,
+            negative_consequences_mental_health=negative_consequences_mental_health,
+            negative_consequences_physical_health=negative_consequences_physical_health,
+            discuss_with_coworkers=discuss_with_coworkers,
+            discuss_with_supervisors=discuss_with_supervisors,
+            bring_up_in_interview_mental_health=bring_up_in_interview_mental_health,
+            bring_up_in_interview_physical_health=bring_up_in_interview_physical_health,
+            employer_takes_mental_health_seriously=employer_takes_mental_health_seriously,
+            observed_negative_consequences=observed_negative_consequences
+        )
+        survey_data.save()
+
+        # Redirect to a success page or do any other necessary actions
+        # return redirect('success_page')  # Replace 'success_page' with the actual URL or view name
+        # return render(request, 'emotion_questionnaire.html')
+        messages.success(request, "Your data has been recorded!!")
+
+    return render(request, 'emotion_questionnaire.html')

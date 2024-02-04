@@ -10,4 +10,5 @@ urlpatterns = [
     path("forgot_password", views.forgot_password_function, name='forgot_password'),
     path("home", views.home_function, name='home'),
     path("contact", views.contact_function, name='contact'),
+    path("emotion_questionnaire", views.emotion_questionnaire_function, name='emotion_questionnaire'),
 ]

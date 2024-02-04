@@ -131,7 +131,7 @@ Application Architecture:
 
 ![Website](./MedIQ_Advisor/readme_resources/cb1.png)
 
--Using Decision Tree Algorithm 
+- Using Decision Tree Algorithm 
 
 ![Website](./MedIQ_Advisor/readme_resources/cb2.png)
 
